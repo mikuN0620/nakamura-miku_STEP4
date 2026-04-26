@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+    color:azure;
+}
+
+form{
+    background-color: beige;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+submit{
+    background-color: blue;
+    text-align: left;
+}
+
+label{
+    width: 400px;
+}
