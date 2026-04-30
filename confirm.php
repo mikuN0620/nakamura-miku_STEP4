@@ -9,7 +9,8 @@
 
 <body>
     <h1>入力内容確認</h1>
-    <?php
+
+<?php
       //ポストリクエストから名前を取得
       if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $name = $_POST["name"];
@@ -23,15 +24,15 @@
 
         //入力規則
         if(!preg_match("/^[ぁ-ん　ァ-ン 一-龠 a-z A-z\s]",$name)){
-        echo <p>名前はひらがな、カタカナ、漢字、英字のみ使用できます。</p>
-      }else if{!is_numeric($age)||$age < 0 ||$age >150{
-       echo <p>年齢は0から150の間で入力してください。</p>
+        echo "<p>名前はひらがな、カタカナ、漢字、英字のみ使用できます。</p>"
+      }else if(!is_numeric($age)||$age < 0 ||$age >150){
+       echo "<p>年齢は0から150の間で入力してください。</p>"
       }else if(!preg_match("/^[0-9 -_s]",$phpne)){
-       echo <p>電話番号は半角数字とハイフンのみ使用できます。</p>
-      }else if(preg_match("[**@**]",$email)){
-       echo <p>メールアドレスの形式が正しくありません。</p>
+       echo "<p>電話番号は半角数字とハイフンのみ使用できます。</p>"
+      }else if($email, FILTER_VALIDATE_EMAIL){
+       echo "<p>メールアドレスの形式が正しくありません。</p>"
       }else if(preg_match("/^[ぁ-ん　ァ-ン 一-龠 a-z A-z\s]",$address)){
-       echo <p>住所はひらがな、カタカナ、漢字、英字のみ使用できます。</p>
+       echo "<p>住所はひらがな、カタカナ、漢字、英字のみ使用できます。</p>"
       }else{
         echo "<p>名前:"htmlspecialchars($name,ENT_QUOTES,'UTF-8')."</p>"
          echo "<p>年齢:"htmlspecialchars($age,ENT_QUOTES,'UTF-8')."</p>"
@@ -42,9 +43,9 @@
             echo "<p>性別:"htmlspecialchars($jender,ENT_QUOTES,'UTF-8')."</p>"
       }
 
-      }
-    ?>
-    <a href="contact.php">戻る</a>
+      
+?>
+    <a href="form.php">戻る</a>
 
     </body>
-</heml>
+</html>
