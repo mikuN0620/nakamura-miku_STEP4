@@ -27,9 +27,9 @@
         <input type="text" id="address" name="address" required><br><br>
 
         <label for="qestion">質問：</label>
-        <input type="text" id="question" name="question" required><br><br>
+        <input type="textarea" id="question" name="question" required><br><br>
 
-        <select name="jender" id="jender" name="jender">性別：
+        <select name="jender" id="jender">性別：
         <option value="men">男性</option>
         <option value="woman">女性</option>
         <option value="otherz">その他</option>

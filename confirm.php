@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>チェック</title>
-    <link rel="stylesheet" >
+    <link rel="stylesheet" href="stylesheet">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
         $age = $_POST["age"];
         $phone = $_POST["phone"];
         $email = $_POST["email"];
-        $place = $_POST["place"];
+        $place = $_POST["address"];
         $qestion = $_POST["qestion"];
         $jender = $_POST["jender"];
 
@@ -35,8 +35,8 @@
       } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
           echo "<p>メールアドレスの形式が正しくありません。</p>";
       
-      } else if (!preg_match("/^[ぁ-んァ-ン一-龠A-Za-z0-9\s　\-]+$/u", $address)) {
-          echo "<p>住所の形式が正しくありません。</p>";
+      } else if (!preg_match("/^[ぁ-んァ-ン一-龠A-Za-z0-9\s　]+$/u", $address)) {
+          echo "<p>住所はひらがな、カタカナ、漢字、英字のみ使用できます。</p>";
       
       } else {
           echo "<p>名前:" . htmlspecialchars($name, ENT_QUOTES, 'UTF-8') . "</p>";
